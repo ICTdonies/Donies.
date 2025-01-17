@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" comtent="width=divice-width, initial-scale=1">
+      <title>Menu</title>
+      <link rel="icon" type="image/x-icon" href="donies.jpg">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <!-- css file -->
+      <link rel="stylesheet" type="text/css" href="2-menu.css">
+      <scrip src="https://code.jquery.com/jquery-3.4.1.js"></scrip>
+</head>
+
+    <body>
+      <!-- header start -->
+      <header class="header">
+        <!-- logo -->
+        <a href="1-index.html" class="logo">
+        <img scr="DONIES.png">
+        </a>
+        
+        <!-- nav bar start -->
+        <nav class="navbar">
+          <input type="checkbox" id="check">
+            <label for= "check" class="check-btn">
+              <i class="fas fa-bars"></i>
+            </label>
+          <ul>
+            <li><a href="1-index.html">Home</a></li>
+            <li><a class="active" href="2-menu.html">Menu</a></li>
+            <li><a href="Saquine Senica.html">About Us</a></li>
+          </ul>
+        <!-- div id="menu-btn" class="fas fa-bars"></div -->
+        </nav>
+        <!-- nav bar end -->
+        
+        
+        <!-- hyperlink with icons (search, cart, profile, menu button) -->
+        <div class = "icons">
+        <div class="cart-container" onmouseover="showCartForm()" onmouseout="hideCartForm()">
+          <a href="4-cart.html">
+          <div class= "fas fa-shopping-cart" id="cartButton"></div>
+          </a>
+          <div class="cart-form" id="cartForm">
+            <form>
+              <div id="cartItem"></div>
+              <div id="total-price">Total Price: ₱<span id="totalPrice">0.00</span></div>
+            </form> 
+          </div>
+         </div>
+         <!-- hyperlink with icons (search, cart, profile, menu button) -->
+      </header>
+      <!-- header end -->
+      
+      <!--Menu Section -->
+   <section class="menu" id="menu">
+      <h1 class="heading">OUR<span>MENU</span></h1>
+      <p class="heading-description">Have you break with Donies!</p>
+      
+      
+      <div class="category-text"><h3>Choco Donies</h3></div>
+      
+   <div class="menu">
+      <div class="container menu-section">
+        <!-- product 1 -->
+        <div class="menu-box">
+          <div class="menu-img">
+            <img src="Chocolate Mallow.jpg" alt="Chocolate Mallow">
+          </div>
+          <div class="menu-content" >
+            <h3>Chocolate Mallow</h3>
+            <p>This donut is coated of balanced sweetness and bitterness of chocolate syrup with the softness mallow toppings.</p>
+             <div onclick="addToCart('Chocolate Mallow (Small)', '₱25.00', 'Product/No BG/Chocolate Mallow.jpg', 'items-s'); return false;">
+               <button id= "item-s">Small <span>₱25.00</span></button><!-- SMALL -->
+             </div>
+             <div onclick="addToCart('Chocolate Mallow(Medium)', '₱35.00', 'Product/No BG/Chocolate Mallow.jpg ', 'items-s'); return false;">
+               <button id= "item-s">Medium <span>₱35.00</span></button><!-- MEDIUM -->
+             </div>
+             <div onclick="addToCart('Chocolate alcapone(Large)', '₱45.00', 'Product/No BG/Chocolate Mallow.jpg', 'items-s'); return false;">
+               <button id= "item-s">Large <span>₱45.00</span></button><!-- Large -->
+             </div>
+          </div>
+        </div>
+        <div class="menu-box">
+           <div class="menu-img">
+             <img src="Chocolate Rice Crispies.jpg" alt="Chocolate Rice Crispies">
+          </div>
+          <div class="menu-content">
+            <h3>Chocolate Rice Crispies</h3>
+            <p>This donut is coated of balanced sweetness and bitterness of chocolate syrup with the crunch feeling of rice crispies.</p>
+             <div onclick="addToCart('Chocolate Rice Crispies (Small)', '₱90.00', 'Product/No BG/Chocolate Rice Crispies .jpg', 'items-s'); return false;">
+               <button id= "item-s">Small <span>₱25.00</span></button>
+             </div>
+            
+             <div onclick="addToCart('Chocolate Rice Crispies(Medium)', '₱100.00', 'Product/No BG/Chocolate Rice Crispies .jpg', 'items-s'); return false;">
+               <button id= "item-s">Medium <span>₱35.00</span></button>
+               </div>
+            
+               <div onclick="addToCart('Chocolate Rice Crispie (Large)', '₱120.00', 'Product/No BG/Chocolate Rice Crispies .jpg', 'items-s'); return false;">
+               <button id= "item-s">Large <span>₱45.00</span></button>
+               </div>
+          </div>
+        </div>
+        
+
+        <div class="menu-box">
+           <div class="menu-img">
+             <img src="Chocolate Graham.jpg" alt="Chocolate Graham">
+          </div>
+          <div class="menu-content">
+            <h3>Chocolate Graham</h3>
+            <p>This donut is coated of balanced sweetness and bitterness of chocolate syrup with the crash Graham.</p>
+            <div onclick="addToCart('Chocolate Graham (Small)', '₱25.00', 'Product/No BG/Chocolate Graham.png', 'items-s'); return false;">
+             <button id= "item-s">Small <span>₱25.00</span></button>
+             </div>
+            
+             <div onclick="addToCart('Chocolate Graham (Medium)', '₱35.00', 'Product/No Chocolate Graham.png', 'items-s'); return false;">
+               <button id= "item-s">Medium <span>₱35.00</span></button>
+               </div>
+            
+               <div onclick="addToCart('Chocolate Graham (Large)', '₱45.00', 'Product/No Chocolate Graham.png', 'items-s'); return false;">
+               <button id= "item-s">Large <span>₱45.00</span></button>
+               </div>
+          </div>
+        </div>
+        
+        <div class="menu-box" id="donies">
+           <div class="menu-img">
+             <img src="Chocolate Oreo.jpg" alt="Chocolate Oreo">
+          </div>
+          <div class="menu-content">
+            <h3>Chocolate Oreo</h3>
+            <p>This donut is coated of balanced sweetness and bitterness of chocolate syrup with the crash Oreo.</p>
+            <div onclick="addToCart('Chocolate Oreo (Small)', '₱25.00', 'Product/No BG/Chocolate Oreo.jpg', 'items-s'); return false;">
+             <button id= "item-s">Small <span>₱25.00</span></button>
+             </div>
+            
+             <div onclick="addToCart('Chocolate Oreo (Medium)', '₱35.00', 'Product/No BG/Chocolate Oreo.jpg', 'items-s'); return false;">
+               <button id= "item-s">Medium <span>₱35.00</span></button>
+               </div>
+            
+               <div onclick="addToCart('Chocolate Oreo (Large)', '₱45.00', 'Product/No BG/Chocolate Oreo.jpg', 'items-s'); return false;">
+               <button id= "item-s">Large <span>₱45.00</span></button>
+               </div>
+          </div>
+        </div>
+        
+        <!-- add moreenu item  with the same structure -->
+      </div>
+      
+        <div class="category-text"><h3>Strawberry Donies</h3></div>
+     
+      <div class="container menu-section">
+        <!-- product 3 -->
+        <div class="menu-box" id="menu">
+          <div class="menu-img">
+            <img src="Strawberry Mallow.jpg" alt="Strawberry Mallow">
+          </div>
+          <div class="menu-content">
+            <h3>Strawberry Mallow</h3>
+            <p> Have a wonderful donut, coated of sour taste flavor of strawberry syrup with the softness of mallow.</p>
+            <div onclick="adrToCart('Strawberry Mallow (Small)', '₱25.00', 'Products/No BG/Strawberry Mallow.png', 'item5-s'); return false;">
+              <button id="item5-s">Small <span>₱25.00</span></button>   
+            </div>
+
+            <div onclick="adrToCart('Strawberry Mallow (Medium)', '₱35.00', 'Products/No BG/Strawberry Mallow.png', 'item5-m'); return false;">
+              <button id="item5-m">Medium <span>₱35.00</span></button>   
+            </div>
+
+            <div onclick="addToCart('strawberry Mallow (Large)', '₱45.00', 'Products/No BG/Strawberry Mallow.png', 'item5-s'); return false;">
+              <button id="item5-s">Large <span>₱45.00</span></button>   
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-box">
+          <div class="menu-img">
+            <img src="Strawberry Rice Crispies.jpg" alt="Strawberry rice crispies">
+          </div>
+          <div class="menu-content">
+            <h3>Strawberry Rice Crispies</h3>
+            <p>Have a wonderful donut, coated of sour taste flavor of strawberry syrup with the crunch feeling of rice crispies.</p></p>
+            <div onclick="addToCart('Strawberry rice crispies (Small)', '₱25.00', 'Products/No BG/Strawberry rice crispies.png', 'item5-s'); return false;">
+              <button id="item5-s">Small <span>₱25.00</span></button>   
+            </div>
+
+            <div onclick="addToCart('Strawberry rice crispies (Medium)', '₱35.00', 'Products/No BG/Strawberry rice crispies.png', 'item5-m'); return false;">
+              <button id="item5-m">Medium <span>₱35.00</span></button>   
+            </div>
+
+            <div onclick="addToCart('Strawberry rice crispies (Large)', '₱45.00', 'Products/No BG/Strawberry rice crispies.png', 'item5-s'); return false;">
+              <button id="item5-s">Large <span>₱45.00</span></button>   
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-box">
+          <div class="menu-img">
+            <img src="Stawberry Graham.jpg" alt="Strawberry grahan">
+          </div>
+          <div class="menu-content">
+            <h3>Strawberry Grahan</h3>
+            <p>Have a wonderful donut, coated of sour taste flavor of strawberry syrup with crash graham.</p></p>
+            <div onclick="addToCart('Strawberry grahan (Small)', '₱25.00', 'Products/No BG/Strawberry grahan.png', 'item5-s'); return false;">
+              <button id="item5-s">Small <span>₱25.00</span></button>   
+            </div>
+
+            <div onclick="addToCart('Strawberry grahan (Medium)', '₱35.00', 'Products/No BG/Strawberry grahan.png', 'item5-m'); return false;">
+              <button id="item5-m">Medium <span>₱35.00</span></button>   
+            </div>
+
+            <div onclick="addToCart('Strawberry grahan (Large)', '₱45.00', 'Products/No BG/Strawberry grahan.png', 'item5-s'); return false;">
+              <button id="item5-s">Large <span>₱45.00</span></button>
+          </div>
+      </div>
+    </div>
+
+    <div class="menu-box">
+          <div class="menu-img">
+            <img src="Starwberry oreo.jpg" alt="Strawberry oreo">
+          </div>
+          <div class="menu-content">
+            <h3>Strawberry Oreo</h3>
+            <p>Have a wonderful donut, coated of sour taste flavor of strawberry syrup with crash oreo.</p></p>
+            <div onclick="addToCart('Strawberry oreo(Small)', '₱25.00', 'Products/No BG/Strawberry oreo.png', 'item5-s'); return false;">
+              <button id="item5-s">Small <span>₱25.00</span></button>   
+            </div>
+
+            <div onclick="addToCart('Strawberry oreo(Medium)', '₱35.00', 'Products/No BG/Strawberry oreo.png', 'item5-m'); return false;">
+              <button id="item5-m">Medium <span>₱35.00</span></button>   
+            </div>
+
+            <div onclick="addToCart('Strawberry oreo (Large)', '₱45.00', 'Products/No BG/Strawberry oreo.png', 'item5-s'); return false;">
+              <button id="item5-s">Large <span>₱45.00</span></button>
+        </div>    
+      </div>
+    </div>
+
+      <!-- Add more menu items here with the same structure -->
+  </div>
+
+    <div class="category-text"><h3>Milky Donies</h3></div>
+
+  <div class="container menu-section">
+   
+    <!-- product 1 -->
+    <div class="menu-box">
+      <div class="menu-img">
+        <img src="Milky Mallow.jpg" alt="Milky mallow">
+    </div>
+    <div class="menu-content">
+        <h3>Milky Mallow</h3>
+        <p>Deal with creamy milk syrup of your donies with the softness of mallow.</p>
+        <div onclick="addToCart('Milky Mallow (Small)', '₱25.00', 'Products/No BG/Milky Mallow.png', 'item9-s'); return false;">
+        <button id="item9-s">Small <span>₱25.00</span></button>
+        </div>  
+
+        <div onclick="addToCart('Milky Mallow (Medium), ₱35.00', 'Products/No BG/Milky Mallow.png', 'item9-m'); return false;">
+          <button id="item9-m">Medium <span>₱35.00</span></button>
+        </div>
+        
+        <div onclick="addToCart('Milky Mallow (Large), ₱45.00', 'Products/No BG/Milky Mallow.png', 'item9-1'); return false;">
+          <button id="item9-1">Large <span>₱45.00</span></button>
+        </div>
+      </div>
+    </div>
+
+<!-- product 2-->
+    <div class="menu-box">
+      <div class="menu-img">
+        <img src="Milky springkles.jpg" alt="Milky sprinkles">
+    </div>
+    <div class="menu-content">
+        <h3>Milky sprinkles</h3>
+        <p>Deal with creamy milk syrup of your donies with the crunch feeling of rice crispies.</p>
+        <div onclick="addToCart('Milky sprinkles (Small)', '₱25.00', 'Products/No BG/Milky sprinkles.png', 'item9-s'); return false;">
+        <button id="item9-s">Small <span>₱25.00</span></button>
+        </div>  
+
+        <div onclick="addToCart('Milky sprinkles(Medium), ₱35.00', 'Products/No BG/Milky sprinkles.png', 'item9-m'); return false;">
+          <button id="item9-m">Medium <span>₱35.00</span></button>
+        </div>
+        
+        <div onclick="addToCart('Milky sprinkles (Large), ₱45.00', 'Products/No BG/Milky sprinkles.png', 'item9-1'); return false;">
+          <button id="item9-1">Large <span>₱45.00</span></button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="menu-box">
+      <div class="menu-img">
+        <img src="Milky graham.jpg" alt="Milky graham ">
+    </div>
+    <div class="menu-content">
+        <h3>Milky Graham</h3>
+        <p>Deal with creamy milk syrup of your donies with crash graham.</p>
+        <div onclick="addToCart('Milky graham (Small)', '₱25.00', 'Products/No BG/Milky graham.jpg', 'item9-s'); return false;">
+        <button id="item9-s">Small <span>₱25.00</span></button>
+        </div>  
+
+        <div onclick="addToCart('Milky graham (Medium), ₱35.00', 'Products/No BG/Milky graham.jpg', 'item9-m'); return false;">
+          <button id="item9-m">Medium <span>₱35.00</span></button>
+        </div>
+        
+        <div onclick="addToCart('Milky graham (Large), ₱45.00', 'Products/No BG/Milky graham.jpg', 'item9-1'); return false;">
+          <button id="item9-1">Large <span>₱45.00</span></button>
+        </div>
+      </div>
+    </div>
+      
+<!-- product 4 -->
+    <div class="menu-box">
+      <div class="menu-img">
+        <img src="Milky oreo.jpg" alt="Milky oreo">
+    </div>
+    <div class="menu-content">
+        <h3>Milky Oreo</h3>
+        <p>Deal with creamy milk syrup of your donies with the crash oreo.</p>
+        <div onclick="addToCart('Milky oreo (Small)', '₱25.00', 'Products/No BG/Milky oreo.png', 'item9-s'); return false;">
+        <button id="item9-s">Small <span>₱25.00</span></button>
+        </div>  
+
+        <div onclick="addToCart('Milky oreo (Medium)', '₱35.00', 'Products/No BG/Milky oreo.png', 'item9-m'); return false;">
+          <button id="item9-m">Medium <span>₱35.00</span></button>
+        </div>
+        
+        <div onclick="addToCart('Milky oreo (Large)', '₱45.00', 'Products/No BG/Milky oreo.png', 'item9-1'); return false;">
+          <button id="item9-1">Large <span>₱45.00</span></button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+    <!-- Menu Section End-->
+
+    <!-- footer start-->
+    <section class="footer">
+      <div class="container">
+  <div class="footer-box-1">
+    <h3> Location </h3>
+    <div class="footer-loc">
+      <a href="https://www.google.com/maps/place/TUP+-+College+of+Industrial+Technology/@14.5873937,128.9848474,17z/data=!3m1!4b1!4m6!3m5!1s0x3397cb93cd451575:0x6247d293ffefede0!8m2!3d14.5873937140128.98484741165%2F8%2F11hfq216nk?hl=en&entry-ttu" target-blank>College of Industrial Technology, 660. TUP,
+Ermita, Manila, 1000</a>
+</div>
+</div>
+
+<div class="footer-box">
+  <li>Newsletter</h3>
+    <p>Stay update with our latest</p>
+    <form>
+      <input type="email" name="email" placeholder="name@gmail.com">
+      <button type="submit"><i class="fa-solid fa-right-long"></i></button>
+    </form>
+  </div>
+
+  <div class="footer-box">
+    <h3>content us</h3>
+    <p>contact with us on:</p>
+  <div class="icons">
+    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+  </div>
+
+</div>
+</del>
+</section>
+<!--footer end -->
+<script src="2-menu"></script>
+</body>
+</html>

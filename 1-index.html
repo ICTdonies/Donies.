@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=divice-width, initial-scale=1">
+	<title>Home</title>
+	<link rel="icon" type="image/x-icon" href="icon/logo.png">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<!-- css file -->
+	<link rel="stylesheet" type="text/css" href="saquine.senica.css">
+</head>
+
+<body>
+	<!-- header start -->
+	<header class ="header">
+		<!-- logo -->
+		<a href="1-index.html" class="logo">
+		<img src="DONIES.png" >
+	    </a>
+
+	    <!-- nav bar start -->
+	    <nav class="navbar">
+	    	<input type="checkbox" id="check">
+	    	    <label for="check" class="check-btn">
+	    	    	<i class="fas fa-bars"></i>
+                </label>
+            <ul>
+               <li><a class="active" href="1-index.html">Home</a></li>
+               <li><a href="2-menu.html">Menu</a></li>
+               <li><a class="active" href="Saquine Senica.html">About Us</a></li>
+            </ul>
+        <!-- <div id="menu-btn" class="fas fa-bars"></div> -->
+        </nav> 
+        <!-- nav bar end -->
+
+
+        <!-- hyperlink with icons (search, cart, profile, menu button) -->
+        	<div class="icons">
+        	<div class="cart-container" onmouseover="showCartForm()" onmouseout="hideCartForm()">
+        	<a href="4-checkout.html">
+       		<div class = "fas fa-shopping-cart" id="cartButton"></div>
+       		</a>
+       			<div class="cart-form" id="cartform">
+       				<form>
+       					<div id="cartitems"></div>
+       					<div id="total-price">Total Price: php<span id="TotalPrice">0.00</span></div>
+       				</form>
+       			</div>
+       		</div>
+       		</div>
+       		<!-- hyperlink with icons (search, cart, profile, menu button) -->
+       	</header>
+       	<!-- header end -->
+
+       	<!-- page content -->
+       	<div class="content">
+       		<section class="about">
+       			<div class="about-image">
+       			<img src="DONIES.png">
+       		</div>
+       		<div class="about-content">
+       			<h2>Hello welcome to donies!</h2>
+       			<p> Their small size makes them perfect for satisfying a sweet craving without feeling overly full. The light and fluffy texture, combined with the sweet glaze, creates a delightful treat that's hard to resist. Whether enjoyed warm or at room temperature, these mini donuts offer a burst of sugary happiness in every bite.  They're a fun and convenient snack or dessert option, ideal for sharing or indulging in a personal moment of sweetness.</p>
+       		</div>
+       		</section>
+       	</div>
+
+       	<!-- top selllers start -->
+       	<section class="menu" id="menu">
+       		<h1 class="heading">BEST<span>SELLING</span>DONIES</h1>
+
+       	</div class="menu"> <!-- menu openning tag -->
+       	<div class="container menu-section">
+       		<!-- product 1 -->
+       	<a href="2-menu.html#Chocolate Donies">
+       		<div class="menu-box">
+       			<div class="menu-img">
+       				<img src="Chocolate oreo.jpg" alt="Chocolate oreo">
+       			</div>
+       			<div class="menu-content">
+       				<h3>Chocolate oreo</h3>
+       				<p>This donut is coated of balanced sweetness and bitterness of chocolate syrup with the crash Oreo.</p>
+       			</div>
+       		</div> </a>
+
+       		<!-- product 2 -->
+       		<a href="2-menu.html#Strawberry donies">
+       			<div class="menu-box">
+       			<div class="menu-img">
+       				<img src="Strawberry Rice Crispies.jpg" alt="Strawberry Rice Crispies">
+       			</div>
+       			<div class="menu-content">
+       				<h3>Strawberry rice crispies</h3>
+       				<p>Have a wonderful donut, coated of sour taste flavor of strawberry syrup with the crunch feeling of rice crispies.</p>
+       			</div>
+       		</div> </a>
+
+       			<!-- product 3 -->
+       		<a href="2-menu.html#Milky donies">
+       			<div class="menu-box">
+       				<div class="menu-img">
+       				<img src="Milky Graham.jpg" alt="Milky Graham">
+       			</div>
+       			<div class="menu-content">
+       				<h3>Milky graham</h3>
+       				<p>Deal with creamy milk syrup of your donies with crash graham.</p>
+       			</div>
+       		</div> </a>
+       	</div> <!-- menu closing tag -->
+       	<div class = "to-menu">
+       		<a href="2-menu.html">See more donies here!</a>
+       	</div>
+       </section>
+       <!-- top seller end -->
+
+       <!-- about us start -->
+
+       <!-- about us end -->
+
+       <script type="2-menu.js"></script>
+
+       <!-- footer start -->
+       <section class="footer">
+
+       <div class="container">
+       	<div class="footer-box-1">
+       		<h3>Location</h3>
+       		<div class="footer-loc">
+       			<a href="https://www.google.com/maps/place/TUP+-+College+of+Idustrial+Technology?@14.5873937,120.9848474,17z/data=!3m1!4b1!4b1!4m6!3m5!1s0x3397cb93cd451575:0x6247d293ffefede0!8m2!3d14.5873937!.5873937!4d120.9848474!16s%2fg%2f11hfq216nk?h1=en&entry=ttu" target=_blank>college of industrial technology, 660. TUP, Ermita, Manila, 1000</a>
+       		</div>
+       	</div>
+
+       	<div class="footer-box">
+                    <h3>Newsletter</h3>
+                    <p>Stay update with our latest</p>
+                    <form>
+                    	<input type="email" name="email" palceholder="name@gmail.com">
+                    	<input type="submit"><i class= "fa-solid fa-right-long"></i></button>
+                    </form>
+                </div>
+
+                <div class="footer-box">
+                	<h3>Contact Us</h3>
+                	<p>Connect With Us ON:</p>
+                	<div class="icons">
+                		<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                		<a href="#"><i class="fa-brands fa-instagram"></i></a>
+                		<a href="#"><i class="fa-brands fa-twitter"></i></a>
+                	</div>
+
+                </div>
+            </div>
+        </section>
+        <!-- footer end -->
+
+    </body>
+    </html> 			
